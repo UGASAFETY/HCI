@@ -19,7 +19,7 @@
         <header class="inner">
 
           <h1 id="project_title">Human Computer Interaction</h1>
-          <h2 id="project_tagline">CSCI4800 - Fall 2014 - Dr. Plaue  </h2>
+          <h2 id="project_tagline">CSCI4800 - Fall 2014 - Dr. Chris Plaue  </h2>
 
            
         </header>
@@ -34,9 +34,8 @@
 <h3>
 <a name="group-5" class="anchor" href="#group-5"><span class="octicon octicon-link"></span></a>Derek Buchman, Dylan Sexton, Michael Keeton, Chris Klappich</h3>
 <hr>
-<br>
-<h4>Overview</h4>
-<p>Crime around a university campus and the general safety of students are the
+<h4>Semester Overview</h4>
+<p>Crime around a University's campus and the general safety of its students are the
 problems we are exploring. The University of Georgia offers some campus safety and
 security services; such as security cameras, foot patrols, and key card
 accessible dormitories. However there are still incidents on campus and students’ safety can be
@@ -49,20 +48,141 @@ incidents per academic year on average. Our solution will work in tandem with cu
 solutions to increase student awareness, police presence, and a general atmosphere of
 safety.</p>
 
-<p>Our design solution is a mobile app that allows a student to check­in whenever they travel late at
+<p>Our design solution is a mobile app that allows a student to 'check­in' with family or friends whenever they travel late at
 night or anywhere that feels unsafe. It focuses on simplicity, keeping an emergency contact
 informed, as well as collecting and storing a minimal amount of user data.
 It allows a user to create a unique profile which houses their chosen emergency contact
-whom they want to keep informed(likely a parent, guardian, or friend) as well as any information
+whom they want to keep informed (likely a parent, guardian, or friend) as well as any information
 police or medical personnel may need if they are contacted. 
 <br><br>Below are screenshots of our initial prototype for AndroidOS:<br></p>
 
 <img src="images/sc1.png" alt="">
 
+<br>
+<p>After creating a functional prototype, we evaluated the design through 
+usability tests and heuristic evaluations.  Through our think-aloud, retrospective, 
+and usability testing we were able to identify several logic errors. We also received 
+a few unexpected, but helpful responses from our participants.
+</p>
+
+<p>Below is a compiled list of our user’s suggestions/errors/comments along
+  with the participant's usability task times:</p>
+
+<p>
+  <ul>
+    <li>The user is always a ‘he’</li>
+    <li>While typing /changing settings, keyboard does not go away easily (or appear)</li>
+    <li>The checkin setting is not a global variable (resets after every pg change)</li>
+    <li>Let users know that this prototype application actually texts people**</li>
+    <li>The checkout w/ safe word still pops up even after user has checked out</li>
+    <li>Ambiguous button for destination and check in</li>
+    <li>Ambiguous emergency button. The user doesn't know its functionality</li>
+    <li>Change the application’s terminology (checkin to en-route?)</li>
+    <li>Who is getting the emergency text?? specify</li>
+    <li>App crashes on back button (too many processes?)</li>
+    <li>Alert dialog crashes if we change the screen  </li>
+    <li>FIXED* Safe word thread is still running when user changes screens but alertdialog is set to null if the user leaves the main page. (app crashes)</li>
+    <li>Use android scroll linear for input fields</li>
+    <li>Verify input fields, currently accepts blank</li>
+    <li>Require first and last name?</li>
+    <li>”Title is ugly”</li>
+    <li>There is no text feedback when emergency mode is pressed</li>
+    <li>”Is this for freshmen only”?  </li>
+    <li>(We might want to consider increasing the scale of this app by adding a way to make custom destinations.)</li>
+    <li>The safe word input field is not autofocused when alert dialog pops up</li>
+    <li>Change colors to a darker theme</li>
+    <li> “Light blue might be too bright at night time”</li>
+    <li>Auto capitalize text input?</li>
+    <li>Initial actions for user’s is uncertain. (“What do I do?”)</li>
+    <li>There is confusion between destination and current location.</li>
+    <li>This app needs more campus buildings options, not just dorms!</li>
+  </ul>
+</p>
+
+<p>Usability Times (seconds)</p>
+<table class="">
+  <tr style="text-align:center;">
+    <th class="">Tasks</th>
+    <th class="">User1</th>
+    <th class="">User2</th>
+    <th class="">User3</th>
+    <th class="">User4</th>
+    <th class="">User5</th>
+  </tr>
+  <tr>
+    <td class="">Create a user profile</td>
+    <td class="">50.75</td>
+    <td class="">59.55</td>
+    <td class="">85.24</td>
+    <td class="">48.39</td>
+    <td class="">41.64</td>
+  </tr>
+  <tr>
+    <td class="">Checkin/checkout to any destination</td>
+    <td class="">1.20</td>
+    <td class="">10.31</td>
+    <td class="">20.81</td>
+    <td class="">29.87</td>
+    <td class="">13.38</td>
+  </tr>
+  <tr>
+    <td class="">Checkin, wait, then enter 'safeword' in popup dialog</td>
+    <td class="">21.20</td>
+    <td class="">37.06</td>
+    <td class="">32.70</td>
+    <td class="">33.58</td>
+    <td class="">33.34</td>
+  </tr>
+  <tr>
+    <td class="">Go to settings and change your 'safeword'</td>
+    <td class="">130.20</td>
+    <td class="">21.00</td>
+    <td class="">24.54</td>
+    <td class="">15.18</td>
+    <td class="">16.68</td>
+  </tr>
+  <tr>
+    <td class="">Activate the app's 'Emergency Mode'</td>
+    <td class="">5.20</td>
+    <td class="">17.12</td>
+    <td class="">17.12</td>
+    <td class="">14.18</td>
+    <td class="">10.75</td>
+  </tr>
+</table>
+
+<p>Also, as part of the evaluation stage of design, the class analyzed
+each group's design using Heuristic Evaluations.  Below is a
+compiled list of usabilty problems (and the respective degree of error) as documented by our classmates:</p>
+
+<p>
+  <ul>
+    <li>Confusion of when you choose the destination whether that is where you are or where you are going (4)</li>
+    <li>After checking in and trying to edit my profile and pressing back, the check-in is removed (3)</li>
+    <li>After sending out emergency text, maybe a short pop-up mentioning that is was successful (2)</li>
+    <li>No indication of what I should be entering into the settings field (2)</li>
+    <li>Estimated time is not shown when you select a destination (3)</li>
+    <li>Having to check-out before setting a new destination is unintuitive (2)</li>
+    <li>For the profile: The text fields need labels. I don’t know where to type my name (4) (Visibility)</li>
+    <li>The arrow button looks like a back button, I did not expect it to exit the program (3) (Match between system and real world)</li>
+    <li>The ! button doesn’t immediately convey emergency send out (1)</li>
+    <li>Why can’t I use the text field to enter information (3)</li>
+    <li>When editing profile, the fields are not labeled (4)</li>
+    <li>When sending GPS location, there is no user feedback (3)</li>
+    <li>The middle button doesn’t immediately convey its functionality (1)</li>
+    <li>Color scheme not unified (1)</li>
+  </ul>
+</p>
+
+<p>Through the various tests we discovered several logical errors and realized that many aspects of our application can be improved.  Overall, the main criticism we received seemed to be that the user does not know what actions to take in order to complete the desired task. The application’s elements 'looked nice', but ultimately failed at conveying its intended functionality.</p>
+
+<p></p>
+
+<img src="images/sc_new.png" alt="">
+
 
 <br>
-<hr>
-<h2>Resources</h2>
+<h2>Group 5 Assignments / Resources</h2>
 
 
 <h3><a name="milestones" class="anchor" href="#milestones"><span class="octicon octicon-link"></span></a>Milestones</h3>
